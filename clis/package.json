@@ -1,0 +1,17 @@
+{
+  "name": "clis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamboo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "commander": "^2.11.0",
+    "git-last-commit": "^0.3.0"
+  },
+  "browser": { "fs": false, "child_process": false }
+}
