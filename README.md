@@ -1,7 +1,2 @@
-# WebhookTest
-Test1
-Update1
-Update2
-Update3
-Update4
-Update5
+# test-appmonitor-bamboo
+This repo is used for testing appmonitor on a Bamboo server
