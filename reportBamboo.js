@@ -1255,17 +1255,17 @@ buildPromise.then(function(response) {
     data: {
       payload: payload
     }
-  }).then(function (response) {
-    if (response.status === 200) {
-      console.info('Response:', response.data);
+  }).then(function (wresponse) {
+    if (wresponse.status === 200) {
+      console.info('Response:', wresponse.data);
       process.exit(0);
     } else {
-      console.error('Webhook Failed!', response.data);
+      console.error('Webhook Failed!', wresponse.data);
       process.exit(1);
     }
   })
   .catch(function(e) {
-    console.error('Webhook Failed!', response.data);
+    console.error('Webhook Failed!', wresponse.data);
     process.exit(1);
   });
 });
