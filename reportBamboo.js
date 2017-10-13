@@ -1265,7 +1265,7 @@ buildPromise.then(function(response) {
     }
   })
   .catch(function(e) {
-    console.error('Webhook Failed!', wresponse.data);
+    console.error('Webhook Failed!', e);
     process.exit(1);
   });
 });
