@@ -1227,7 +1227,7 @@ var buildPromise = axios({
     password: program.password
   }
 });
-var commitPromise = new Promise(function (resolve, reject) {
+/*var commitPromise = new Promise(function (resolve, reject) {
 	git.getLastCommit(function(err, commit) {
   	if (err) {
   		reject(err);
@@ -1236,11 +1236,14 @@ var commitPromise = new Promise(function (resolve, reject) {
   	}
 	});	
 });
-
-Promise.all([buildPromise, commitPromise]).then(function(results) {
+*/
+buildPromise.then(function(response) {
   const payload = {
-    build: results[0].data,
-    commit: results[1]
+    build: response.data,
+    commit: {
+      branch: process.env.bamboo_planRepository_branch,
+      last_commit_id: process.env.bamboo_planRepository_revision
+    }
   };
   console.info('Results:', payload)
   axios({
